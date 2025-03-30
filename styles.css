@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 22px; 
+  color: #355725;
+  background-color: #FFFADA; 
+  cursor: url(http://www.rw-designer.com/icon-view/23289.png), auto;
+}
+
+
+header {
+  flex-shrink: 0;
+}
+main {
+  flex: 1;
+}
+
+
+
+.brand-name {
+  font-family: 'Fredoka One', sans-serif; 
+  font-size: 50px;
+  color: #455E8F;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: -3rem; 
+  padding: 0 2rem;
+  max-width: 80%;
+}
+
+.nav-left {
+  display: flex;
+  gap: 1.5rem; 
+  flex-grow: -10;
+  margin-left: -1rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem; 
+  margin-right: -15rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-family: 'Fredoka One', sans-serif;
+  color: #355725;
+  font-size: 32px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: -40rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color:#FFE335;
+  min-width: 220px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #355725;
+  font-size: 24px;
+  white-space: nowrap; 
+}
+
+.dropdown-content a:hover {
+  background-color: #e6f4e1; 
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.nav-bar a:hover {
+  color: #ff914d;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-home,
+.header-topics,
+.header-feedback {
+  background-color: #FFE335;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-home,
+.footer-topics,
+.footer-feedback {
+  background-color: #FFE335;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.heading-large {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 40px;
+  color: #355725;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.heading-medium {
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 35px;
+  color: #355725;
+  margin: 1rem 0;
+  margin-left: 10rem;
+}
+
+.text-body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: #355725;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0 10rem;
+}
+
+.text-topic {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: #355725;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 0 10rem;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  height: 300px;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  opacity: 1; 
+  position: relative; 
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  background-color: #455E8F;
+  color: #FFFADA;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+
+
+.topic-section {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+.topic-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.counselor-img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-left: 680px;
+}
+
+.faq {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.question {
+  background: #FFE335;
+  color: #355725;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.question:hover {
+  background: #FFFADA;
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  background: #355725;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  color: #FFFADA; 
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  height: 200px;
+  width: 500px;
+  
+}
+
+.submit-btn {
+  background-color: #355725;
+  color: #FFFADA;
+  border: none;
+  padding: 0.75rem;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-group button {
+  background-color: #FFE335;
+  color: #355725;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 15px;
+
+}
+
+
+/* Resource List */
+.resource-list {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.resource-list li {
+  margin: 0.5rem 0;
+}
+
+.resource-list a {
+  color: #455E8F;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.home-bg {
+  background-color: #FFFADA;
+}
+.topics-bg {
+  background-color: #FFFADA;
+}
+.feedback-bg {
+  background-color: #FFFADA;
+}
+.about-bg {
+  background-color: #FFFADA;
+}
+
+.footer-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFE335;
+  color: #355725;
+  padding: 20px 20px;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 32px;
+}
+.footer-left a,
+.footer-right .btn {
+  color: #355725;
+  text-decoration: none;
+  margin: 0 180px;
+}
+
+.resources-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #355725; 
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.cta-button:hover {
+  background-color: #455E8F; 
+}
